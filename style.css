@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid blue;
+  flex-wrap: nowrap;
+  width: 80vw;
+}
+
+img {
+  width: 30vw;
+}
+.text {
+  align-self: space-around;
+}
+.meters {
+  display: flex;
+  flex-flow: column wrap;
+  width: 80vw;
+}
+.activity {
+  word-wrap: break-word;
+  height: 15vw;
+}
+.type-particpants {
+  height: 15vw;
+}
+.price {
+}
+.price-meter {
+  align-self: flex-end;
+  width: 60vw;
+}
+.accessibility {
+}
+.access-meter {
+  align-self: flex-end;
+
+  width: 60vw;
+}
