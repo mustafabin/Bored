@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap");
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  font-family: "Fredoka", sans-serif;
 }
 .main {
   width: 100%;
@@ -25,30 +27,81 @@ img {
   width: 30vw;
 }
 .text {
+  margin-top: 25px;
   align-self: space-around;
 }
 .meters {
   display: flex;
   flex-flow: column wrap;
-  width: 80vw;
+  width: 70vw;
+  border: 1px solid blue;
+  border-top: none;
+  padding: 5vw;
+}
+.shadow {
+  box-shadow: 0px 0px, -0.5em 0 0.9em rgb(185, 185, 179);
 }
 .activity {
-  word-wrap: break-word;
   height: 15vw;
+}
+.result {
+  font-weight: lighter;
+  padding: 15px;
 }
 .type-particpants {
   height: 15vw;
 }
-.price {
-}
+
 .price-meter {
   align-self: flex-end;
+  height: 35px;
   width: 60vw;
-}
-.accessibility {
+  border: 1px solid black;
+  border-radius: 55px;
 }
 .access-meter {
   align-self: flex-end;
-
+  height: 35px;
   width: 60vw;
+  border: 1px solid black;
+  border-radius: 55px;
+}
+button {
+  font-size: 2rem;
+  text-shadow: 1px 1px rgb(187, 181, 181);
+  padding: 20px;
+  border-radius: 10%;
+  background-color: rgb(80, 12, 12);
+  color: rgb(236, 154, 154);
+  transition: 0.5s;
+  margin: 30px;
+}
+button:hover {
+  font-style: oblique;
+
+  background-color: rgb(22, 129, 58);
+  color: rgb(49, 243, 81);
+  border-radius: 20%;
+}
+h1 {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  border-bottom: 2px dotted rgb(255, 0, 0);
+  border-top: 2px dotted rgb(255, 0, 0);
+  letter-spacing: 0.2rem;
+}
+.access-meter-bar {
+  background-color: lawngreen;
+  border-radius: 50px;
+  width: 0%;
+  height: 100%;
+  transition: width 0.5s;
+}
+.price-meter-bar {
+  background-color: lawngreen;
+  border-radius: 50px;
+  width: 0%;
+  height: 100%;
+  transition: width 0.5s;
 }

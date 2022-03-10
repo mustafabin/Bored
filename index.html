@@ -12,30 +12,39 @@
 
 <body>
   <div class="main">
-    <div class="main-card">
-      <img src="/luffy.png" alt="Bored">
-      <div class="text">
-        <div class="activity">
+    <button id="generate">Generate!</button>
+    <h1>Activity</h1>
+    <div class="shadow">
 
-          <p>Activity: </p> <span> Practice coding in your favorite lanaguage</span>
-        </div>
-        <div class="type-particpants">
+      <div class="main-card">
+        <img src="/luffy.png" alt="Bored">
+        <div class="text">
+          <div class="activity">
 
-          <p>Type: </p> <span>Education</span>
+            <p>Activity: </p> <span id="activity" class="result"> Practice coding in your favorite lanaguage</span>
+          </div>
+          <div class="type-particpants">
+
+            <p>Type: </p> <span id="type" class="result">Education</span>
+          </div>
         </div>
+
+
+
       </div>
+      <div class="meters">
+
+        <p class="price">Price: </p>
+        <div class="price-meter">
+          <div class="price-meter-bar"></div>
+        </div>
+        <p class="accessibility">Accessibility: </p>
+        <div class="access-meter">
+          <div class="access-meter-bar"></div>
+        </div>
 
 
-
-    </div>
-    <div class="meters">
-
-      <p class="price">Price: </p>
-      <meter class="price-meter" id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50"></meter>
-
-      <p class="accessibility">Accessibility: </p>
-      <meter class="access-meter" id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50"></meter>
-
+      </div>
     </div>
 
   </div>
