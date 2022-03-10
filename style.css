@@ -71,18 +71,21 @@ button {
   font-size: 2rem;
   text-shadow: 1px 1px rgb(187, 181, 181);
   padding: 20px;
+  border: 1px solid rgb(189, 18, 18);
   border-radius: 10%;
-  background-color: rgb(80, 12, 12);
-  color: rgb(236, 154, 154);
+
+  background-color: rgb(189, 18, 18);
+  color: rgb(255, 219, 219);
   transition: 0.5s;
   margin: 30px;
+  border-radius: 20%;
 }
 button:hover {
-  font-style: oblique;
-
-  background-color: rgb(22, 129, 58);
-  color: rgb(49, 243, 81);
-  border-radius: 20%;
+  font-size: 2.1rem;
+  text-shadow: 1.2px 1.2px rgb(228, 0, 0);
+  border: 1px solid rgb(50, 214, 105);
+  background-color: rgb(50, 214, 105);
+  color: rgb(200, 255, 210);
 }
 h1 {
   margin-bottom: 20px;
