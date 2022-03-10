@@ -1,5 +1,17 @@
 // api:https://www.boredapi.com/api
 
+let subscriptionKey = "7e1c057980a94d1fad8bb0375e9f960e";
+
+let getImg = async (query) => {
+  let bingResponse = await axios.get(
+    "https://api.bing.microsoft.com/v7.0/images/search?q=" + query,
+    {
+      headers: { "Ocp-Apim-Subscription-Key": subscriptionKey },
+    }
+  );
+  return bingResponse.data.value[0].contentUrl;
+};
+
 let getRandom = async () => {
   let response = await axios.get("https://www.boredapi.com/api/activity");
   let data = response.data;
@@ -26,7 +38,7 @@ let getRandom = async () => {
   console.log(price);
   if (price < 7) {
     //set a minumin of seven
-    price = 7;
+    price = 8;
   }
   if (price > 60) {
     priceBar.style.backgroundColor = "red";
@@ -37,6 +49,8 @@ let getRandom = async () => {
   }
   priceBar.style.width = price + "%";
   accessBar.style.width = accessibility + "%";
+  let srcImg = await getImg(activity);
+  document.querySelector("#mainImg").src = srcImg;
 };
 
 document.querySelector("#generate").addEventListener("click", getRandom);

@@ -105,11 +105,17 @@ h1 {
 .price-meter-bar {
   background-color: lawngreen;
   border-radius: 50px;
-  width: 7%;
+  width: 8%;
   height: 100%;
   transition: width 0.5s;
 }
 span,
 p {
   font-size: 1.4rem;
+}
+
+#mainImg {
+  max-width: 180px;
+  max-height: 180px;
+  padding: 20px;
 }
