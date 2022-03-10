@@ -35,10 +35,11 @@ let getRandom = async () => {
   } else {
     accessBar.style.backgroundColor = "lawngreen";
   }
-  console.log(price);
-  if (price < 7) {
+  if (price < 7 || price < 12) {
     //set a minumin of seven
-    price = 8;
+    if (window.innerWidth >= 1000) {
+      price = 12;
+    } else price = 8;
   }
   if (price > 60) {
     priceBar.style.backgroundColor = "red";
@@ -47,6 +48,7 @@ let getRandom = async () => {
   } else {
     priceBar.style.backgroundColor = "lawngreen";
   }
+  console.log(price);
   priceBar.style.width = price + "%";
   accessBar.style.width = accessibility + "%";
   let srcImg = await getImg(activity);

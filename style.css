@@ -135,6 +135,10 @@ p {
     padding-bottom: 15px;
     padding-top: 5;
   }
+  button:hover {
+    font-size: 5.3vw;
+    letter-spacing: 0.2rem;
+  }
   .access-meter,
   .price-meter {
     height: 7vw;
