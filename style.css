@@ -6,10 +6,10 @@
   font-family: "Fredoka", sans-serif;
 }
 .main {
-  width: 100%;
-  height: 100vh;
+  margin-top: 100px;
+  width: 100vw;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -18,7 +18,6 @@
   display: flex;
   justify-content: left;
   align-items: center;
-
   flex-wrap: nowrap;
   width: 80vw;
 }
@@ -27,8 +26,9 @@ img {
   width: 30vw;
 }
 .text {
+  display: flex;
+  flex-direction: column;
   margin-top: 25px;
-  align-self: space-around;
 }
 .meters {
   display: flex;
@@ -37,6 +37,7 @@ img {
 
   border-top: none;
   padding: 5vw;
+  padding-top: 0;
 }
 .shadow {
   border-radius: 15px;
@@ -50,6 +51,8 @@ img {
   padding: 15px;
 }
 .type-particpants {
+  margin-top: 5rem;
+
   height: 15vw;
 }
 
@@ -115,7 +118,28 @@ p {
 }
 
 #mainImg {
-  max-width: 180px;
-  max-height: 180px;
   padding: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  span,
+  p {
+    font-size: 3vw;
+    padding: 15px;
+  }
+  button,
+  h1 {
+    font-size: 5vw;
+  }
+  h1 {
+    padding-bottom: 15px;
+    padding-top: 5;
+  }
+  .access-meter,
+  .price-meter {
+    height: 7vw;
+  }
+  .price-meter-bar {
+    width: 12%;
+  }
 }
