@@ -14,23 +14,29 @@ let getRandom = async () => {
   document.querySelector("#activity").textContent = activity;
   document.querySelector("#type").textContent = type;
   const priceBar = document.querySelector(".price-meter-bar");
-  priceBar.style.width = price + "%";
   const accessBar = document.querySelector(".access-meter-bar");
+  console.log(accessibility);
+  if (accessibility < 30) {
+    accessBar.style.backgroundColor = "red";
+  } else if (price > 30 && price < 50) {
+    accessBar.style.backgroundColor = "yellow";
+  } else {
+    accessBar.style.backgroundColor = "lawngreen";
+  }
+  console.log(price);
+  if (price < 7) {
+    //set a minumin of seven
+    price = 7;
+  }
+  if (price > 60) {
+    priceBar.style.backgroundColor = "red";
+  } else if (price > 40) {
+    priceBar.style.backgroundColor = "yellow";
+  } else {
+    priceBar.style.backgroundColor = "lawngreen";
+  }
+  priceBar.style.width = price + "%";
   accessBar.style.width = accessibility + "%";
-  if (accessibility < 40) {
-    accessBar.style.backgroundColor = "#ff0008";
-  } else {
-    accessBar.style.backgroundColor = "#10f700";
-  }
-  if (price > 50) {
-    if (price < 7) {
-      priceBar.style.backgroundColor = "#FFFFFF";
-    } else {
-      priceBar.style.backgroundColor = "#ff0008";
-    }
-  } else {
-    priceBar.style.backgroundColor = "#10f700";
-  }
 };
 
 document.querySelector("#generate").addEventListener("click", getRandom);
